@@ -13,6 +13,9 @@ on:
 jobs:
   build:
 
+    env:
+      USERNAME: ${{ github.actor }}
+      PASSWORD: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -35,7 +38,4 @@ jobs:
       # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
       # the publishing section of your build.gradle
       - name: Publish to GitHub Packages
-        run: ./gradlew publish
-        env:
-          USERNAME: ${{ github.actor }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew publish -DUSERNAME=${{ env.USERNAME }} -DPASSWORD=${{ env.PASSWORD }}
