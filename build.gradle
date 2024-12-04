@@ -126,7 +126,7 @@ assets {
 publishing {
     repositories {
         maven {
-            name 'GitHub Packages Registry'
+            name 'GitHubPackages'
             url "https://maven.pkg.github.com/inbo/biocache-hubs"
             credentials {
                 username = System.getenv('USERNAME')
