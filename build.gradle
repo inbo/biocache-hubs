@@ -129,8 +129,8 @@ publishing {
             name 'GitHub Packages Registry'
             url "https://maven.pkg.github.com/inbo/biocache-hubs"
             credentials {
-                username = System.getenv("github.actor")
-                password = System.getenv("secrets.GITHUB_TOKEN")
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
             }
         }
     }
