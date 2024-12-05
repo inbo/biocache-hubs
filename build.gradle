@@ -1,6 +1,6 @@
 buildscript {
     version "7.1.1"
-    group "au.org.ala.plugins.grails"
+    group "be.inbo.plugins.grails"
 }
 
 plugins {
