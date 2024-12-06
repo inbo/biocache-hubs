@@ -622,6 +622,7 @@
                       method="GET">
                     <br/>
                     <div class="col-sm-9 input-group">
+                        <label for="occurrenceID"><g:message code="home.index.occurrenceidsearch.des01" default="Enter occurrence ID"/></label>
                         <input type="text" class="form-control" name="occurrenceID" id="occurrenceID"/>
                         <span class="input-group-btn">
                             <input class="form-control btn btn-primary" id="occurrenceIDSearchButton"  type="submit"
