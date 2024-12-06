@@ -1,6 +1,6 @@
 buildscript {
     version "7.1.1"
-    group "au.org.ala.plugins.grails"
+    group "be.inbo.plugins.grails"
 }
 
 plugins {
@@ -126,16 +126,16 @@ assets {
 publishing {
     repositories {
         maven {
-            name 'Nexus'
-            url "https://nexus.ala.org.au/content/repositories/${project.version.endsWith('-SNAPSHOT') ? 'snapshots' : 'releases' }"
+            name 'GitHubPackages'
+            url "https://maven.pkg.github.com/inbo/biocache-hubs"
             credentials {
-                username = System.getenv('TRAVIS_DEPLOY_USERNAME')
-                password = System.getenv('TRAVIS_DEPLOY_PASSWORD')
+                username = System.getenv('USERNAME')
+                password = System.getenv('PASSWORD')
             }
         }
     }
     publications {
-        mavenJava(MavenPublication) {
+        gpr(MavenPublication) {
             from components.java
         }
     }
