@@ -369,7 +369,7 @@
                     </li>
                     <li><a id="t5" href="#spatialSearch" data-toggle="tab"><g:message code="home.index.navigator05"
                                                                                       default="Spatial search"/></a></li>
-                    <li><a id="t7" href="#occurrenceIdSearch" data-toggle="tab"><g:message code="home.index.navigator07"
+                    <li><a id="t7" href="#occurrenceIDSearch" data-toggle="tab"><g:message code="home.index.navigator07"
                                                                                       default="Occurrence ID search"/></a>
                     </li>
                 </ul>
