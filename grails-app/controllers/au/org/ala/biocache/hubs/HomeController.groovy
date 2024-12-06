@@ -39,11 +39,11 @@ class HomeController {
         redirect(controller: "occurrences", action: "search", params: params)
     }
 
-    def occurrenceIDSearch(SpatialSearchRequestParams requestParams) {
+    def occurrenceIDSearch(OccurrenceIDSearchParams params) {
         log.debug("Home controller occurrenceIDSearch page")
         String id = ""
-        if (requestParams.occurrenceID != null && requestParams.occurrenceID.trim().length() > 0) {
-            id = requestParams.occurrenceID.trim()
+        if (params.occurrenceID != null && params.occurrenceID.trim().length() > 0) {
+            id = params.occurrenceID.trim()
         }
         redirect(controller: "occurrences", action: "show", id: id)
     }
