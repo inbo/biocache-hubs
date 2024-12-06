@@ -369,6 +369,9 @@
                     </li>
                     <li><a id="t5" href="#spatialSearch" data-toggle="tab"><g:message code="home.index.navigator05"
                                                                                       default="Spatial search"/></a></li>
+                    <li><a id="t7" href="#occurrenceIDSearch" data-toggle="tab"><g:message code="home.index.navigator07"
+                                                                                      default="Occurrence ID search"/></a>
+                    </li>
                 </ul>
             </div>
 
@@ -614,6 +617,19 @@
                         </div>
                     </div>
                 </div><!-- end #spatialSearch  -->
+                <div id="occurrenceIDSearch" class="tab-pane">
+                <form class="form-horizontal" name="occurrenceIDSearchForm" id="occurrenceIDSearchForm" action="${request.contextPath}/occurrenceIDSearch"
+                      method="GET">
+                    <br/>
+                    <div class="col-sm-9 input-group">
+                        <input type="text" class="form-control" name="occurrenceID" id="occurrenceID"/>
+                        <span class="input-group-btn">
+                            <input class="form-control btn btn-primary" id="occurrenceIDSearchButton"  type="submit"
+                                   value="${g.message(code:"home.index.simsplesearch.button", default:"Search")}"/>
+                        </span>
+                    </div>
+                </form>
+                </div><!-- end #occurrenceIDSearch div -->
             </div><!-- end .tab-content -->
         </div><!-- end .span12 -->
     </div><!-- end .row -->
