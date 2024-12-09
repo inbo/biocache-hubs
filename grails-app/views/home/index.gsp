@@ -618,15 +618,16 @@
                     </div>
                 </div><!-- end #spatialSearch  -->
                 <div id="occurrenceIDSearch" class="tab-pane">
-                <form class="form-horizontal" name="occurrenceIDSearchForm" id="occurrenceIDSearchForm" action="${request.contextPath}/occurrenceIDSearch"
+                <form name="occurrenceIDSearchForm" id="occurrenceIDSearchForm" action="${request.contextPath}/occurrenceIDSearch"
                       method="GET">
-                    <br/>
-                    <div class="col-sm-9">
-                        <div class="form-group">
-                            <label for="occurrenceID"><g:message code="home.index.occurrenceidsearch.des01" default="Enter occurrence ID"/></label>
-                            <input type="text" class="form-control" name="occurrenceID" id="occurrenceID"/>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label for="occurrenceID"><g:message code="home.index.occurrenceidsearch.des01" default="Enter occurrence ID"/></label>
+                                <input type="text" class="form-control" name="occurrenceID" id="occurrenceID"/>
+                            </div>
+                            <input class="btn btn-primary" id="occurrenceIDSearchButton"  type="submit" value="${g.message(code:"home.index.simsplesearch.button", default:"Search")}"/>
                         </div>
-                        <input class="form-control btn btn-primary" id="occurrenceIDSearchButton"  type="submit" value="${g.message(code:"home.index.simsplesearch.button", default:"Search")}"/>
                     </div>
                 </form>
                 </div><!-- end #occurrenceIDSearch div -->
