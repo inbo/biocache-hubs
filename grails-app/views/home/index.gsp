@@ -626,7 +626,7 @@
                                 <label for="occurrenceID"><g:message code="home.index.occurrenceidsearch.des01" default="Enter occurrence ID"/></label>
                                 <input type="text" class="form-control" name="occurrenceID" id="occurrenceID"/>
                             </div>
-                            <input class="form-control btn btn-primary" id="occurrenceIDSearchButton"  type="submit" value="${g.message(code:"home.index.simsplesearch.button", default:"Search")}"/>
+                            <input class="btn btn-primary" id="occurrenceIDSearchButton"  type="submit" value="${g.message(code:"home.index.simsplesearch.button", default:"Search")}"/>
                         </div>
                     </div>
                 </form>
