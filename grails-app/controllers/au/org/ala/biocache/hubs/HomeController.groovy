@@ -45,7 +45,8 @@ class HomeController {
         if (params.occurrenceID != null && params.occurrenceID.trim().length() > 0) {
             id = params.occurrenceID.trim()
         }
-        redirect(controller: "occurrences", action: "show", id: id)
+        params.q = String.format("occurrenceID:\"%s\"", id)
+        redirect(controller: "occurrences", action: "search", params: params)
     }
 
     /**
