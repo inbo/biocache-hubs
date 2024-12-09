@@ -626,7 +626,7 @@
                         <input type="text" class="form-control" name="occurrenceID" id="occurrenceID"/>
                         <span class="input-group-btn">
                             <input class="form-control btn btn-primary" id="occurrenceIDSearchButton"  type="submit"
-                                   value="${g.message(code:"home.index.simsplesearch.button", default:"Search")}"/>
+                                   value="${g.message(code:"home.index.simplesearch.button", default:"Search")}"/>
                         </span>
                     </div>
                 </form>
