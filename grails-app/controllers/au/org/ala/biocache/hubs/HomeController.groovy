@@ -39,11 +39,11 @@ class HomeController {
         redirect(controller: "occurrences", action: "search", params: params)
     }
 
-    def occurrenceIDSearch(OccurrenceIDSearchParams params) {
+    def occurrenceIDSearch(OccurrenceIDSearchParams requestParams) {
         log.debug("Home controller occurrenceIDSearch page")
-        String id = ""
-        if (params.occurrenceID != null && params.occurrenceID.trim().length() > 0) {
-            id = params.occurrenceID.trim()
+        def id = ""
+        if (requestParams.occurrenceID != null && requestParams.occurrenceID.trim().length() > 0) {
+            id = requestParams.occurrenceID.trim()
         }
         params.q = String.format("occurrenceID:\"%s\"", id)
         redirect(controller: "occurrences", action: "search", params: params)
