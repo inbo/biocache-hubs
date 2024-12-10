@@ -361,9 +361,10 @@
                                                                                       default="Advanced search"/></a></li>
                     <li><a id="t3" href="#taxaUpload" data-toggle="tab"><g:message code="home.index.navigator03"
                                                                                    default="Batch taxon search"/></a></li>
-                    <li><a id="t4" href="#catalogUpload" data-toggle="tab"><g:message code="home.index.navigator04"
-                                                                                      default="Catalogue number search"/></a>
-                    </li>
+                    <g:if test="${grailsApplication.config.getProperty('searchTabs.catalogUpload') == 'true'}">
+                        <li><a id="t4" href="#catalogUpload" data-toggle="tab"><g:message code="home.index.navigator04"
+                                                                                      default="Catalogue number search"/></a></li>
+                    </g:if>
                     <li><a id="t6" href="#eventSearch" data-toggle="tab"><g:message code="home.index.navigator06"
                                                                                       default="Event search"/></a>
                     </li>
