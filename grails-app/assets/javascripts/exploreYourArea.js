@@ -473,7 +473,7 @@ function loadRecordsLayer(retry) {
     MAP_VAR.removeFqs = "&fq=species_group:" + (speciesGroup === "ALL_SPECIES" ? "*" : speciesGroup) + "&fq=taxon_name:" + (taxon ? ("\"" + taxon + "\""): "*");
 
     var alaMapUrl = MAP_VAR.biocacheServiceUrl + "/ogc/wms/reflect?" + alaParams;
-    var pointColour = BC_CONF.pointColour;
+    var pointColour = MAP_VAR.pointColour;
     var wmsParams = {
         layers: 'ALA:occurrences',
         format: 'image/png',

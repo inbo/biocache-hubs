@@ -62,6 +62,7 @@
             hasGoogleKey: ${grailsApplication.config.getProperty('google.apikey') as Boolean},
             removeFqs: '',
             mapIconUrlPath: "${assetPath(src:'/leaflet/images')}"
+            pointColour: ${grailsApplication.config.getProperty('map.pointColour')}
         }
 
         //make the taxa and rank global variable so that they can be used in the download
