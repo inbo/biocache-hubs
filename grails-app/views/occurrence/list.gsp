@@ -77,7 +77,7 @@
             expandKey: "${(grailsApplication.config.getProperty("dataquality.expandKey", String, "dqDetailExpand"))}",
             autocompleteUrl: "${grailsApplication.config.getProperty('skin.useAlaBie', Boolean) ? (grailsApplication.config.getProperty('bieService.baseUrl') + '/search/auto.json') : biocacheServiceUrl + '/autocomplete/search'}",
             autocompleteUseBie: ${grailsApplication.config.getProperty('skin.useAlaBie', Boolean)},
-            pointColour: ${grailsApplication.config.getProperty('map.pointColour')}
+            pointColour: "${grailsApplication.config.getProperty('map.pointColour')}"
         };
 </script>
 
@@ -254,7 +254,7 @@
                                                         <g:if test="${defaultFacets.containsKey(facetFromGroup)}">
                                                             <g:set var="count" value="${count + 1}"/>
                                                             <input type="checkbox" name="facets" class="facetOpts" value="${facetFromGroup}"
-                                                                ${(defaultFacets.get(facetFromGroup)) ? 'checked=checked' : ''}>&nbsp;<alatag:message
+                                                                ${(defaultFacets.get(facetFromGroup)) != null ? 'checked=checked' : ''}>&nbsp;<alatag:message
                                                                 code="facet.${facetFromGroup}" default="${facetFromGroup}"/><br/>
                                                         </g:if>
                                                     </g:each>
